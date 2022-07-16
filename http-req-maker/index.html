@@ -24,6 +24,8 @@
     document.addEventListener('DOMContentLoaded', function() {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems, {});
+        var elems = document.querySelectorAll('select');
+　　    var instances = M.FormSelect.init(elems,[]);
     });
 </script>
 
@@ -41,12 +43,28 @@
 </style>
 <div class="container">
 <main>
+
 <div class="row" id="url-div">
     <div class="input-field col s12">
       <input id="url" type="text" class="validate">
       <label class="active" for="url">URL</label>
     </div>
 </div>
+
+<div class="input-field col s12" id="req-type-div">
+    <select id="req-type">
+      <option value="get" selected>GET</option>
+      <option value="post">POST</option>
+      <option value="head" disabled>HEAD</option>
+      <option value="put" disabled>PUT</option>
+      <option value="275" disabled>275km/h(準備中)</option>
+      <option value="300" disabled>300km/h(準備中)</option>
+      <option value="320" disabled>320km/h(準備中)</option>
+      <option value="360" disabled>360km/h(準備中)</option>
+    </select>
+    <label>メソッド</label>
+</div>
+
 </main>
 </div>
 </html>
